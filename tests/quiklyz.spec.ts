@@ -21,6 +21,7 @@ test.only('login',async ({ page }) => {
   await page.locator('(//input[@id="otpField-4"])[1]').fill('5');
   await page.locator('(//input[@id="otpField-5"])[1]').fill('6');
   await page.getByRole('button', { name: 'Login', exact: true }).click();
+  //car selection
 //   await page.locator("//span[text()=' Audi (1) ']").check();
 //   await page.getByText('SUV (28)').click();
 //   await page.getByLabel('Automatic (51)').check();
@@ -34,16 +35,29 @@ test.only('login',async ({ page }) => {
 //   await page.getByText('15,000 km/year').click();
 //   await page.locator("(//mat-select-trigger[text()=' Assured Buyback '])[2]").click();
 //   await page.locator("//span[text()='Flexi Advantage ']").click();
+//check my eligibility
 //   await page.locator("(//span[text()=' Check my Eligibility '])[1]").click();
-  await page.locator("//input[@name='PAN_NO_5d3d4a20-c8b1-4e61-9a51-564899597612']").fill('IVIPS4490D');
-  await page.getByLabel('Open calendar').click();
-  await page.getByLabel('Choose month and year').click();
-  await page.locator("//div[text()=' 1998 ']").click();
-  await page.getByLabel('December 1998').click();
-  await page.getByLabel('10 December 1998', { exact: true }).click();
-  //await page.getByLabel('11 September 2023').click();
+  // await page.locator("//input[@name='PAN_NO_5d3d4a20-c8b1-4e61-9a51-564899597612']").fill('IVIPS4490D');
+  // await page.getByLabel('Open calendar').click();
+  // await page.getByLabel('Choose month and year').click();
+  // await page.locator("//div[text()=' 1998 ']").click();
+  // await page.getByLabel('December 1998').click();
+  // await page.getByLabel('10 December 1998', { exact: true }).click();
+  // //await page.getByLabel('11 September 2023').click();
+  // await page.locator('#mat-checkbox-6 > .mat-checkbox-layout > .mat-checkbox-inner-container').click();
+  // await page.getByRole('button', { name: 'Edit Record' }).click();
+  //check eligibility and reserve
+  // await page.locator("//input[@name='RM_ADDRESS_LINE1_599ec899-409f-49eb-ac88-2820bd813775']").fill('1/89A, vivekanatha street');
+  // await page.locator("//input[@name='RM_CITY_8d1739d1-dd9c-4f81-8214-38eed5006cc3']").fill('chennai');
+  // await page.locator("//input[@name='RM_PINCODE_97a54ab1-f72a-4d86-8541-3d93f5c9cef3']").fill('600110');
+  // await page.locator("//span[@class='mat-select-placeholder mat-select-min-line ng-tns-c71-90 ng-star-inserted']").click();
+  // await page.locator("//span[text()=' Tamil Nadu ']").click();
+  // await page.locator("(//span[text()='Continue'])[1]").click();
+  //Employeement status
+  //await page.locator("(//span[text()='Continue'])[1]").click();
+  //income validation
   await page.locator('#mat-checkbox-6 > .mat-checkbox-layout > .mat-checkbox-inner-container').click();
-  await page.getByRole('button', { name: 'Edit Record' }).click();
+  await page.locator("(//button[text()='Continue'])[1]").click();
   await page.pause();
   // await page.goBack();
   // await page.getByRole('button', { name: 'OK' }).click();
